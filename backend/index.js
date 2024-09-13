@@ -23,6 +23,7 @@ mongoose.connect(process.env.DB_URI)
 app.use(express.json());  // Use built-in express.json() for JSON parsing
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'jewellery-shop', 'dist')));
+app.use(cors({ origin: '*' })); // Adjust origin as needed
 
 // Routes
 app.use("/api/auth", authroute);
