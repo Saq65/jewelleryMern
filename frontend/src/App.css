@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Futura";
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../public/Assests/fonts/FuturaNowHeadlineThin.ttf");
+}
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #efefef;
+}
+.welcome p {
+  font-family: "Futura", sans-serif;
+  font-size: 12px;
+  color: #1c1c1c;
+  letter-spacing: 1px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-top: 12px;
+}
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.nav-header {
+  background-color: #083057;
+  height: 58px;
+}
+.collection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 19px;
+}
+.collection ul {
+  display: flex;
+  align-items: center;
+  gap: 3vh;
+  width: 95%;
+  list-style: none;
+}
+.collection ul li {
+  color: #c6a856;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.icon {
+  color: #c6a856;
+}
+.swiper {
+  height: 550px;
+}
+.joy {
+  padding: 40px;
+  background-color: #efefef;
+}
+.joy-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.joy-heading h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.gifting-slider {
+  margin-top: 50px;
+  height: 300px;
+}
+.sold {
+  background-color: #f5f4f5;
+  width: 78px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid .item1 {
+  background-color: #ffffff;
+  height: 435px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 5px;
+  font-size: 30px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #c6a856;
+}
+
+.grid .item2 {
+  background-image: url(../public/Assests/Images/website_banner-02.webp);
+  background-size: cover;
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+.secondslider {
+  margin-top: 50px;
+  background-color: #efefef;
+  padding: 50px;
+  height: 386px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid2 .item3 {
+  background-color: #ffffff;
+  height: 435px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 5px;
+  font-size: 30px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #c6a856;
+}
+
+.grid2 .item4 {
+  background-image: url(../public/Assests/Images/woman_wearing_fine_jewelry.jpg);
+  background-size: cover;
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+.marquee {
+  background-color: #083057;
+  color: #c6a856;
+}
+
+.jwelvdo {
+  height: 536px;
+}
+.login {
+  height: 300px;
+  width: 400px;
+  margin-top: 10vh;
+}
+.heading h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.signup {
+  height: 400px;
+  width: 400px;
+  margin-top: 10vh;
+}
+.cardtext {
+  text-align: center;
+}
+.mySwiper2 {
+  height: 300px;
+}
+.mobile-menu{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .swiper {
+    height: 200px;
+    width: auto;
+  }
+  .joy-heading h4 {
+    margin-top: 10px;
+  }
+  .joy {
+    padding: unset;
+  }
+  .gifting-slider {
+    margin-top: 10px;
+    height: auto;
+  }
+  .cardtext {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center; /* Center text horizontally */
+  }
+  .mySwiper2 {
+    height: auto;
+  }
+  .collection {
+    display: none;
+  }
+  .rs {
+    display: none;
+  }
+  .icon {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .secondslider {
+    padding: unset;
+    height: auto;
+  }
+  .mobile-menu{
+    display: block;
+    position: fixed;
+    top: 94%;
+    width: 100%;
+    background-color: #083057;
+    height: 65px;
+  }
+  .signup{
+    width: auto;
+    height: auto;
+  }
+  .login{
+    width: auto;
+    height: auto;
+  }
+}
