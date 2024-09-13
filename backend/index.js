@@ -21,14 +21,21 @@ mongoose.connect(process.env.DB_URI)
 
 // Middleware
 app.use(express.json());  // Use built-in express.json() for JSON parsing
-app.use(cors());
+app.use(cors({ origin: '*' })); // Allow all origins, adjust if needed
+
+// Serve static files
 app.use(express.static(path.join(__dirname, 'jewellery-shop', 'dist')));
-app.use(cors({ origin: '*' })); // Adjust origin as needed
+
+// Logging middleware
+app.use((req, res, next) => {
+  console.log(`Request Method: ${req.method}, Request URL: ${req.url}`);
+  next();
+});
 
 // Routes
 app.use("/api/auth", authroute);
 
-// Serve static files
+// Serve index.html for all non-API routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'jewellery-shop', 'dist', 'index.html'));
 });
