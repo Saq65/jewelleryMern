@@ -12,7 +12,7 @@ function Profile() {
     e.preventDefault();
 
     try {
-      const res = await  fetch("http://localhost:5000/api/auth/signin", {
+      const res = await  fetch("https://jewellerymern-api.onrender.com/api/auth/signin", {
         method: "POST",
         headers: {
           "content-type": "application/json",
