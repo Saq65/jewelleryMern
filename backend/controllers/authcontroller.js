@@ -4,12 +4,12 @@ const userModals = require("../models/authModal");
 
 const signup = async (req, res, next) => {
   const { firstname, lastname, email, password } = req.body;
-  const hashedpassword = bcrypt.hashSync(password, 10);
+  // const hashedpassword = bcrypt.hashSync(password, 10);
   const newUser = new userModals({
     firstname,
     lastname,
     email,
-    password: hashedpassword,
+    password,
   });
 
   try {
